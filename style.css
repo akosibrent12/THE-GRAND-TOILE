@@ -1,0 +1,1878 @@
+
+/* =========================================================
+   THE GRAND ÉTOILE
+   LUXURY RESORT & SPA
+   COMPLETE SHARED WEBSITE STYLESHEET
+========================================================= */
+
+
+/* =========================================================
+   01. ROOT VARIABLES & RESET
+========================================================= */
+
+:root {
+    --black: #10100f;
+    --black-soft: #191917;
+    --black-light: #24231f;
+
+    --gold: #c6a66b;
+    --gold-light: #dfc89d;
+    --gold-dark: #9c7b43;
+
+    --ivory: #f8f6f0;
+    --cream: #eee9df;
+    --white: #ffffff;
+
+    --gray: #77756f;
+    --gray-light: #d9d5cc;
+
+    --heading-font: 'Cormorant Garamond', Georgia, serif;
+    --body-font: 'DM Sans', Arial, sans-serif;
+
+    --container: 1240px;
+
+    --transition: 0.4s ease;
+    --shadow: 0 15px 45px rgba(0, 0, 0, 0.10);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
+body {
+    font-family: var(--body-font);
+    background: var(--ivory);
+    color: var(--black);
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+body,
+button,
+input,
+select,
+textarea {
+    font-family: var(--body-font);
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+ul {
+    list-style: none;
+}
+
+::selection {
+    background: var(--gold);
+    color: var(--black);
+}
+
+.container {
+    width: min(90%, var(--container));
+    margin: 0 auto;
+}
+
+.narrow-container {
+    max-width: 850px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+
+/* =========================================================
+   02. TYPOGRAPHY
+========================================================= */
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: var(--heading-font);
+    font-weight: 500;
+    line-height: 1.12;
+}
+
+h1 {
+    font-size: clamp(3.5rem, 7vw, 6.5rem);
+}
+
+h2 {
+    font-size: clamp(2.5rem, 4.5vw, 4.2rem);
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+p {
+    color: var(--gray);
+    font-size: 0.95rem;
+}
+
+.eyebrow {
+    display: inline-block;
+    color: var(--gold-dark);
+    font-size: 0.69rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+}
+
+.section {
+    padding: 110px 0;
+}
+
+.section-heading {
+    max-width: 750px;
+    margin: 0 auto 65px;
+}
+
+.section-heading h2 {
+    margin-bottom: 20px;
+}
+
+.section-heading p {
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   03. BUTTONS
+========================================================= */
+
+.btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    padding: 16px 32px;
+
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+
+    border: 1px solid transparent;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.btn-gold {
+    background: var(--gold);
+    color: var(--black);
+    border-color: var(--gold);
+}
+
+.btn-gold:hover {
+    background: transparent;
+    color: var(--gold-light);
+    border-color: var(--gold);
+    transform: translateY(-3px);
+}
+
+.btn-outline {
+    color: var(--gold-dark);
+    border-color: var(--gold);
+    background: transparent;
+}
+
+.btn-outline:hover {
+    background: var(--gold);
+    color: var(--black);
+    transform: translateY(-3px);
+}
+
+.text-link {
+    display: inline-block;
+    margin-top: 20px;
+    color: var(--gold-dark);
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    transition: var(--transition);
+}
+
+.text-link:hover {
+    color: var(--black);
+    transform: translateX(5px);
+}
+
+
+/* =========================================================
+   04. HEADER & NAVIGATION
+========================================================= */
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    background: rgba(16, 16, 15, 0.97);
+    border-bottom: 1px solid rgba(198, 166, 107, 0.2);
+    backdrop-filter: blur(15px);
+}
+
+.nav-container {
+    min-height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    color: var(--white);
+    font-family: var(--heading-font);
+    font-size: 1.65rem;
+    line-height: 1;
+    letter-spacing: 2px;
+    white-space: nowrap;
+}
+
+.logo span {
+    color: var(--gold);
+}
+
+.logo small {
+    margin-top: 8px;
+    font-family: var(--body-font);
+    color: var(--gold-light);
+    font-size: 0.48rem;
+    letter-spacing: 3px;
+    text-align: center;
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    gap: 27px;
+}
+
+.main-nav a {
+    position: relative;
+    color: #e4e0d8;
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: var(--transition);
+    white-space: nowrap;
+}
+
+.main-nav a:not(.nav-booking)::after {
+    content: "";
+    position: absolute;
+    bottom: -9px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: var(--gold);
+    transition: var(--transition);
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+    color: var(--gold);
+}
+
+.main-nav a:hover::after,
+.main-nav a.active::after {
+    width: 100%;
+}
+
+.main-nav .nav-booking {
+    padding: 13px 20px;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+}
+
+.main-nav .nav-booking:hover,
+.main-nav .nav-booking.active {
+    background: var(--gold);
+    color: var(--black);
+}
+
+.menu-toggle {
+    display: none;
+    background: transparent;
+    color: var(--gold);
+    border: 0;
+    font-size: 1.8rem;
+}
+
+
+/* =========================================================
+   05. MAIN HOMEPAGE HERO
+========================================================= */
+
+.hero {
+    position: relative;
+    min-height: 790px;
+    display: flex;
+    align-items: center;
+    background:
+        linear-gradient(90deg, rgba(0,0,0,.68), rgba(0,0,0,.12)),
+        url("https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=2200&q=90")
+        center/cover no-repeat;
+    color: var(--white);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 850px;
+    padding: 100px 0;
+}
+
+.hero .eyebrow {
+    color: var(--gold-light);
+}
+
+.hero h1 {
+    margin-bottom: 25px;
+}
+
+.hero p {
+    max-width: 570px;
+    color: rgba(255,255,255,.83);
+    margin-bottom: 35px;
+    font-size: 1rem;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+
+/* =========================================================
+   06. PAGE HERO SECTIONS
+========================================================= */
+
+.page-hero {
+    position: relative;
+    min-height: 590px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: var(--white);
+    overflow: hidden;
+}
+
+.page-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        rgba(0,0,0,.35),
+        rgba(0,0,0,.68)
+    );
+}
+
+.page-hero-content {
+    position: relative;
+    z-index: 2;
+    width: min(90%, 900px);
+    padding: 100px 0;
+}
+
+.page-hero .eyebrow {
+    color: var(--gold-light);
+}
+
+.page-hero h1 {
+    margin-bottom: 20px;
+}
+
+.page-hero p {
+    max-width: 650px;
+    margin: 0 auto 32px;
+    color: rgba(255,255,255,.86);
+    font-size: 1rem;
+}
+
+
+/* Individual page backgrounds */
+
+.rooms-hero {
+    background-image: url("https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=2200&q=90");
+}
+
+.dining-hero {
+    background-image: url("https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=2200&q=90");
+}
+
+.experiences-hero {
+    background-image: url("https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=2200&q=90");
+}
+
+.gallery-hero {
+    background-image: url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=2200&q=90");
+}
+
+.about-hero {
+    background-image: url("https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=2200&q=90");
+}
+
+.contact-hero {
+    background-image: url("https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=2200&q=90");
+}
+
+
+/* =========================================================
+   07. BOOKING BAR
+========================================================= */
+
+.booking-section {
+    position: relative;
+    z-index: 5;
+    margin-top: -65px;
+}
+
+.booking-form {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr) auto;
+    align-items: end;
+    gap: 20px;
+    padding: 35px;
+    background: var(--white);
+    box-shadow: var(--shadow);
+}
+
+.booking-field label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--black);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.booking-field input,
+.booking-field select {
+    width: 100%;
+    min-height: 48px;
+    padding: 10px;
+    background: var(--ivory);
+    border: 1px solid var(--gray-light);
+    outline: none;
+}
+
+
+/* =========================================================
+   08. INTRODUCTION & CONTENT
+========================================================= */
+
+.intro-section {
+    padding: 140px 0 100px;
+}
+
+.intro-content {
+    max-width: 850px;
+    margin: auto;
+    text-align: center;
+}
+
+.intro-content h2 {
+    margin-bottom: 25px;
+}
+
+.intro-content p {
+    margin-bottom: 15px;
+}
+
+.dining-intro {
+    background: var(--ivory);
+}
+
+
+/* =========================================================
+   09. ROOMS & ACCOMMODATIONS
+========================================================= */
+
+.rooms-section,
+.accommodation-section {
+    background: var(--ivory);
+}
+
+.rooms-grid,
+.room-grid,
+.accommodation-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 35px;
+}
+
+.room-card,
+.accommodation-card {
+    background: var(--white);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.room-card:hover,
+.accommodation-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 60px rgba(0,0,0,.15);
+}
+
+.room-card img,
+.accommodation-card img {
+    height: 320px;
+    object-fit: cover;
+    transition: transform .7s ease;
+}
+
+.room-card:hover img,
+.accommodation-card:hover img {
+    transform: scale(1.04);
+}
+
+.room-info,
+.accommodation-info {
+    padding: 30px;
+}
+
+.room-info h3,
+.accommodation-info h3 {
+    margin-bottom: 12px;
+}
+
+.room-info p,
+.accommodation-info p {
+    margin-bottom: 20px;
+}
+
+.room-price {
+    display: block;
+    margin-top: 20px;
+    color: var(--gold-dark);
+    font-family: var(--heading-font);
+    font-size: 1.8rem;
+}
+
+.room-price small {
+    font-family: var(--body-font);
+    color: var(--gray);
+    font-size: 0.7rem;
+}
+
+.room-features,
+.room-amenities {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 20px;
+    margin: 20px 0;
+    color: var(--gray);
+    font-size: 0.78rem;
+}
+
+.room-features span,
+.room-amenities span {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.room-details {
+    padding: 70px 0;
+    background: var(--cream);
+}
+
+
+/* =========================================================
+   10. FEATURED CONTENT / IMAGE SPLIT
+========================================================= */
+
+.featured-experience,
+.chef-section,
+.hospitality-section {
+    background: var(--cream);
+}
+
+.featured-container,
+.chef-container,
+.hospitality-container,
+.about-story-container {
+    display: grid;
+    grid-template-columns: 1.1fr .9fr;
+    align-items: center;
+    gap: 75px;
+}
+
+.featured-image,
+.chef-image,
+.hospitality-image,
+.about-story-image {
+    overflow: hidden;
+}
+
+.featured-image img,
+.chef-image img,
+.hospitality-image img,
+.about-story-image img {
+    height: 540px;
+    object-fit: cover;
+    transition: transform .8s ease;
+}
+
+.featured-image:hover img,
+.chef-image:hover img,
+.hospitality-image:hover img,
+.about-story-image:hover img {
+    transform: scale(1.04);
+}
+
+.featured-content h2,
+.chef-content h2,
+.hospitality-content h2,
+.about-story-content h2 {
+    margin-bottom: 25px;
+}
+
+.featured-content p,
+.chef-content p,
+.hospitality-content p,
+.about-story-content p {
+    margin-bottom: 18px;
+}
+
+.featured-content .btn,
+.chef-content .btn,
+.hospitality-content .btn {
+    margin-top: 15px;
+}
+
+
+/* =========================================================
+   11. DINING & RESTAURANTS
+========================================================= */
+
+.restaurants-section {
+    background: var(--ivory);
+}
+
+.restaurant-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+}
+
+.restaurant-card {
+    background: var(--white);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.restaurant-card:hover {
+    transform: translateY(-8px);
+}
+
+.restaurant-image {
+    height: 290px;
+    overflow: hidden;
+}
+
+.restaurant-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .7s ease;
+}
+
+.restaurant-card:hover .restaurant-image img {
+    transform: scale(1.07);
+}
+
+.restaurant-info {
+    padding: 30px;
+}
+
+.restaurant-info h3 {
+    margin-bottom: 15px;
+}
+
+.restaurant-info p {
+    margin-bottom: 20px;
+}
+
+.restaurant-details {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    padding: 18px 0;
+    border-top: 1px solid var(--gray-light);
+    border-bottom: 1px solid var(--gray-light);
+    color: var(--gray);
+    font-size: 0.73rem;
+}
+
+
+/* Signature dishes */
+
+.signature-section {
+    background: var(--cream);
+}
+
+.signature-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.signature-card {
+    background: var(--white);
+    overflow: hidden;
+}
+
+.signature-card img {
+    height: 300px;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.signature-card:hover img {
+    transform: scale(1.05);
+}
+
+.signature-info {
+    padding: 25px;
+}
+
+.signature-info h3 {
+    margin-bottom: 12px;
+}
+
+
+/* =========================================================
+   12. EXPERIENCES & ACTIVITIES
+========================================================= */
+
+.activities-section {
+    background: var(--ivory);
+}
+
+.activities-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.activity-card {
+    background: var(--white);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.activity-card:hover {
+    transform: translateY(-7px);
+}
+
+.activity-image {
+    height: 270px;
+    overflow: hidden;
+}
+
+.activity-image img {
+    height: 100%;
+    object-fit: cover;
+    transition: transform .7s ease;
+}
+
+.activity-card:hover .activity-image img {
+    transform: scale(1.07);
+}
+
+.activity-info {
+    padding: 28px;
+}
+
+.activity-info h3 {
+    margin-bottom: 15px;
+}
+
+.activity-info p {
+    margin-bottom: 10px;
+}
+
+
+/* =========================================================
+   13. EXPERIENCE BENEFITS & VALUES
+========================================================= */
+
+.experience-benefits,
+.core-values-section {
+    background: var(--ivory);
+}
+
+.experience-grid,
+.benefits-grid,
+.values-grid,
+.mission-vision-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.benefit-item,
+.experience-card,
+.value-card,
+.mission-card {
+    padding: 40px 30px;
+    text-align: center;
+    background: var(--white);
+    border: 1px solid rgba(198,166,107,.25);
+    transition: var(--transition);
+}
+
+.benefit-item:hover,
+.experience-card:hover,
+.value-card:hover,
+.mission-card:hover {
+    transform: translateY(-7px);
+    box-shadow: var(--shadow);
+    border-color: var(--gold);
+}
+
+.benefit-icon,
+.experience-icon,
+.value-icon,
+.mission-icon {
+    margin-bottom: 20px;
+    color: var(--gold-dark);
+    font-family: var(--heading-font);
+    font-size: 2.5rem;
+}
+
+.benefit-item h3,
+.experience-card h3,
+.value-card h3,
+.mission-card h3 {
+    margin-bottom: 12px;
+}
+
+.mission-vision-grid {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.mission-card {
+    padding: 55px 45px;
+}
+
+
+/* =========================================================
+   14. GALLERY
+========================================================= */
+
+.gallery-section {
+    background: var(--ivory);
+}
+
+.gallery-filters {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 45px;
+}
+
+.gallery-filter {
+    padding: 11px 22px;
+    background: transparent;
+    border: 1px solid var(--gray-light);
+    color: var(--gray);
+    font-size: .7rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    transition: var(--transition);
+}
+
+.gallery-filter:hover,
+.gallery-filter.active {
+    background: var(--black);
+    border-color: var(--black);
+    color: var(--gold);
+}
+
+.luxury-gallery,
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 280px;
+    gap: 18px;
+}
+
+.gallery-item {
+    position: relative;
+    min-height: 250px;
+    overflow: hidden;
+    background: var(--black-light);
+    animation: fadeIn .5s ease;
+}
+
+.gallery-item.gallery-large {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .8s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.09);
+}
+
+.gallery-item::after {
+    content: "";
+    position: absolute;
+    inset: 35% 0 0;
+    background: linear-gradient(transparent, rgba(0,0,0,.8));
+    pointer-events: none;
+}
+
+.gallery-caption {
+    position: absolute;
+    z-index: 2;
+    left: 25px;
+    bottom: 25px;
+    color: var(--white);
+}
+
+.gallery-caption span {
+    display: block;
+    margin-bottom: 7px;
+    color: var(--gold-light);
+    font-size: .62rem;
+    letter-spacing: 2px;
+}
+
+.gallery-caption h3 {
+    font-size: 1.7rem;
+}
+
+
+/* =========================================================
+   15. ABOUT PAGE
+========================================================= */
+
+.about-story-container {
+    grid-template-columns: 1fr 1fr;
+}
+
+.about-signature {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid var(--gold);
+}
+
+.about-signature span {
+    color: var(--gold-dark);
+    font-family: var(--heading-font);
+    font-size: 1.6rem;
+    letter-spacing: 2px;
+}
+
+.about-signature small {
+    color: var(--gray);
+    font-size: .6rem;
+    letter-spacing: 2px;
+}
+
+.about-philosophy {
+    padding: 120px 0;
+    background: var(--black);
+    color: var(--white);
+}
+
+.about-philosophy .eyebrow {
+    color: var(--gold-light);
+}
+
+.about-philosophy h2 {
+    max-width: 850px;
+    margin: 0 auto 25px;
+}
+
+.about-philosophy p {
+    max-width: 750px;
+    margin: auto;
+    color: #c4c0b8;
+}
+
+.mission-vision-section {
+    background: var(--cream);
+}
+
+.hospitality-section {
+    background: var(--ivory);
+}
+
+.brand-statement {
+    position: relative;
+    min-height: 520px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--white);
+    background: url("https://images.unsplash.com/photo-1518837695005-2083093ee35b?auto=format&fit=crop&w=2000&q=85") center/cover no-repeat;
+}
+
+.brand-statement-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,.55);
+}
+
+.brand-statement-content {
+    position: relative;
+    z-index: 2;
+}
+
+.brand-statement-content .eyebrow {
+    color: var(--gold-light);
+}
+
+.brand-statement-content h2 {
+    margin-bottom: 20px;
+}
+
+.brand-statement-content p {
+    color: var(--white);
+}
+
+.about-cta {
+    background: var(--ivory);
+}
+
+.about-cta h2 {
+    margin-bottom: 20px;
+}
+
+.about-cta p {
+    margin-bottom: 30px;
+}
+
+
+/* =========================================================
+   16. QUOTE SECTION
+========================================================= */
+
+.gallery-quote {
+    padding: 110px 0;
+    background: var(--black);
+    color: var(--white);
+}
+
+.gallery-quote .eyebrow {
+    color: var(--gold-light);
+}
+
+.gallery-quote h2 {
+    max-width: 900px;
+    margin: 0 auto 25px;
+    font-style: italic;
+}
+
+.gallery-quote p {
+    color: var(--gold);
+    font-size: .7rem;
+    letter-spacing: 3px;
+}
+
+
+/* =========================================================
+   17. LIFESTYLE & CTA BANNERS
+========================================================= */
+
+.lifestyle-banner,
+.dining-cta,
+.contact-banner {
+    position: relative;
+    min-height: 520px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--white);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.lifestyle-banner {
+    background-image: url("https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=2000&q=85");
+}
+
+.dining-cta {
+    background-image: url("https://images.unsplash.com/photo-1518837695005-2083093ee35b?auto=format&fit=crop&w=2000&q=85");
+}
+
+.experience-cta {
+    background-image: url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=2000&q=85");
+}
+
+.gallery-cta {
+    background-image: url("https://images.unsplash.com/photo-1473116763249-2faaef81ccda?auto=format&fit=crop&w=2000&q=85");
+}
+
+.contact-banner {
+    background-image: url("https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=2000&q=85");
+}
+
+.lifestyle-overlay,
+.dining-cta-overlay,
+.contact-banner-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,.58);
+}
+
+.lifestyle-content,
+.dining-cta-content,
+.contact-banner-content {
+    position: relative;
+    z-index: 2;
+    width: min(90%, 850px);
+    padding: 80px 0;
+}
+
+.lifestyle-content .eyebrow,
+.dining-cta-content .eyebrow,
+.contact-banner-content .eyebrow {
+    color: var(--gold-light);
+}
+
+.lifestyle-content h2,
+.dining-cta-content h2,
+.contact-banner-content h2 {
+    margin-bottom: 22px;
+}
+
+.lifestyle-content p,
+.dining-cta-content p,
+.contact-banner-content p {
+    margin-bottom: 30px;
+    color: rgba(255,255,255,.85);
+}
+
+
+/* =========================================================
+   18. CONTACT PAGE
+========================================================= */
+
+.contact-details-section {
+    background: var(--cream);
+}
+
+.contact-details-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.contact-detail-card {
+    padding: 35px 20px;
+    background: var(--white);
+    text-align: center;
+    border: 1px solid rgba(198,166,107,.2);
+    transition: var(--transition);
+}
+
+.contact-detail-card:hover {
+    transform: translateY(-7px);
+    box-shadow: var(--shadow);
+    border-color: var(--gold);
+}
+
+.contact-detail-icon {
+    margin-bottom: 15px;
+    color: var(--gold-dark);
+    font-size: 2rem;
+}
+
+.contact-detail-card h3 {
+    margin-bottom: 10px;
+    font-size: 1.6rem;
+}
+
+.contact-detail-card p {
+    overflow-wrap: anywhere;
+    font-size: .78rem;
+}
+
+
+/* =========================================================
+   19. RESERVATION FORM
+========================================================= */
+
+.reservation-section {
+    background: var(--ivory);
+}
+
+.reservation-container {
+    display: grid;
+    grid-template-columns: .8fr 1.2fr;
+    align-items: start;
+    gap: 65px;
+}
+
+.reservation-intro {
+    position: sticky;
+    top: 130px;
+}
+
+.reservation-intro h2 {
+    margin-bottom: 20px;
+}
+
+.reservation-note {
+    display: flex;
+    gap: 15px;
+    margin: 35px 0;
+    padding: 20px;
+    background: var(--cream);
+    border-left: 3px solid var(--gold);
+}
+
+.reservation-note span {
+    color: var(--gold-dark);
+    font-size: 1.5rem;
+}
+
+.reservation-note p {
+    font-size: .83rem;
+}
+
+.reservation-image {
+    overflow: hidden;
+}
+
+.reservation-image img {
+    height: 380px;
+    object-fit: cover;
+}
+
+.reservation-form-wrapper {
+    padding: 45px;
+    background: var(--white);
+    box-shadow: var(--shadow);
+}
+
+.form-heading {
+    margin-bottom: 35px;
+}
+
+.form-heading h3 {
+    margin-bottom: 10px;
+    font-size: 2.3rem;
+}
+
+.form-heading p {
+    font-size: .75rem;
+}
+
+.form-section-title {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 35px 0 25px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--gray-light);
+}
+
+.form-section-title span {
+    color: var(--gold-dark);
+    font-family: var(--heading-font);
+    font-size: 1.6rem;
+}
+
+.form-section-title h4 {
+    font-family: var(--heading-font);
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--black);
+    font-size: .73rem;
+    font-weight: 700;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    min-height: 50px;
+    padding: 13px 15px;
+    border: 1px solid var(--gray-light);
+    background: var(--ivory);
+    color: var(--black);
+    font-size: .8rem;
+    outline: none;
+    transition: var(--transition);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 130px;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--gold-dark);
+    box-shadow: 0 0 0 3px rgba(198,166,107,.12);
+}
+
+.form-submit {
+    margin-top: 20px;
+}
+
+.form-submit .btn {
+    width: 100%;
+}
+
+.form-submit p {
+    margin-top: 15px;
+    font-size: .68rem;
+    text-align: center;
+}
+
+.form-message {
+    margin-top: 20px;
+    font-size: .85rem;
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   20. FOOTER
+========================================================= */
+
+.site-footer {
+    background: var(--black);
+    color: var(--white);
+    padding-top: 85px;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+    gap: 50px;
+    padding-bottom: 65px;
+}
+
+.footer-brand .logo {
+    width: fit-content;
+    margin-bottom: 25px;
+}
+
+.footer-brand p {
+    max-width: 300px;
+    color: #a7a39a;
+    font-size: .83rem;
+}
+
+.footer-links,
+.footer-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-links h3,
+.footer-contact h3 {
+    margin-bottom: 12px;
+    color: var(--gold);
+    font-family: var(--body-font);
+    font-size: .78rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.footer-links a {
+    color: #aaa69e;
+    font-size: .78rem;
+    transition: var(--transition);
+}
+
+.footer-links a:hover {
+    color: var(--gold);
+    padding-left: 5px;
+}
+
+.footer-contact p {
+    color: #aaa69e;
+    font-size: .78rem;
+    overflow-wrap: anywhere;
+}
+
+.footer-bottom {
+    padding: 25px 0;
+    border-top: 1px solid rgba(255,255,255,.12);
+    text-align: center;
+}
+
+.footer-bottom p {
+    color: #88857e;
+    font-size: .7rem;
+    letter-spacing: .5px;
+}
+
+
+/* =========================================================
+   21. ANIMATIONS
+========================================================= */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(35px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.page-hero-content,
+.hero-content {
+    animation: fadeUp 1s ease both;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .section-heading,
+    .restaurant-card,
+    .activity-card,
+    .room-card {
+        animation: fadeIn .8s ease both;
+    }
+}
+
+
+/* =========================================================
+   22. RESPONSIVE TABLET
+========================================================= */
+
+@media (max-width: 1050px) {
+
+    .main-nav {
+        gap: 16px;
+    }
+
+    .main-nav a {
+        font-size: .61rem;
+    }
+
+    .logo {
+        font-size: 1.4rem;
+    }
+
+    .restaurant-grid,
+    .activities-grid,
+    .signature-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contact-details-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .featured-container,
+    .chef-container,
+    .hospitality-container,
+    .about-story-container {
+        gap: 40px;
+    }
+
+    .booking-form {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* =========================================================
+   23. RESPONSIVE MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .section {
+        padding: 75px 0;
+    }
+
+    .nav-container {
+        min-height: 75px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .main-nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+
+        padding: 15px 5% 25px;
+        background: var(--black);
+        border-top: 1px solid rgba(198,166,107,.2);
+    }
+
+    .main-nav.active {
+        display: flex;
+    }
+
+    .main-nav a {
+        padding: 15px 0;
+        font-size: .75rem;
+        border-bottom: 1px solid rgba(255,255,255,.08);
+    }
+
+    .main-nav a:not(.nav-booking)::after {
+        display: none;
+    }
+
+    .main-nav .nav-booking {
+        margin-top: 15px;
+        text-align: center;
+    }
+
+    .hero {
+        min-height: 650px;
+    }
+
+    .page-hero {
+        min-height: 500px;
+    }
+
+    .page-hero-content {
+        padding: 75px 0;
+    }
+
+    .hero-content {
+        padding: 70px 0;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .booking-section {
+        margin-top: 0;
+        padding-top: 30px;
+    }
+
+    .booking-form {
+        grid-template-columns: 1fr;
+        padding: 25px;
+    }
+
+    .rooms-grid,
+    .room-grid,
+    .accommodation-grid,
+    .restaurant-grid,
+    .signature-grid,
+    .activities-grid,
+    .experience-grid,
+    .benefits-grid,
+    .values-grid,
+    .mission-vision-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .featured-container,
+    .chef-container,
+    .hospitality-container,
+    .about-story-container,
+    .reservation-container {
+        grid-template-columns: 1fr;
+    }
+
+    .featured-image img,
+    .chef-image img,
+    .hospitality-image img,
+    .about-story-image img {
+        height: 350px;
+    }
+
+    .reservation-intro {
+        position: static;
+    }
+
+    .reservation-form-wrapper {
+        padding: 28px 20px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .luxury-gallery,
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 210px;
+        gap: 10px;
+    }
+
+    .gallery-item.gallery-large {
+        grid-column: span 2;
+        grid-row: span 1;
+    }
+
+    .gallery-caption {
+        left: 14px;
+        bottom: 14px;
+    }
+
+    .gallery-caption h3 {
+        font-size: 1.3rem;
+    }
+
+    .gallery-caption span {
+        font-size: .52rem;
+    }
+
+    .gallery-filters {
+        gap: 8px;
+    }
+
+    .gallery-filter {
+        padding: 9px 14px;
+        font-size: .62rem;
+    }
+
+    .contact-details-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 35px 25px;
+    }
+
+    .lifestyle-banner,
+    .dining-cta,
+    .contact-banner {
+        min-height: 430px;
+    }
+
+    .mission-card {
+        padding: 35px 25px;
+    }
+}
+
+
+/* =========================================================
+   24. SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .container {
+        width: 90%;
+    }
+
+    .logo {
+        font-size: 1.25rem;
+    }
+
+    .logo small {
+        font-size: .42rem;
+    }
+
+    h1 {
+        font-size: 3.1rem;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+    }
+
+    h3 {
+        font-size: 1.7rem;
+    }
+
+    .eyebrow {
+        font-size: .59rem;
+        letter-spacing: 2px;
+    }
+
+    .btn {
+        width: 100%;
+        padding: 15px 20px;
+        font-size: .63rem;
+    }
+
+    .hero {
+        min-height: 570px;
+    }
+
+    .page-hero {
+        min-height: 440px;
+    }
+
+    .page-hero p {
+        font-size: .85rem;
+    }
+
+    .restaurant-image,
+    .activity-image {
+        height: 230px;
+    }
+
+    .room-card img,
+    .accommodation-card img,
+    .signature-card img {
+        height: 230px;
+    }
+
+    .contact-details-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .luxury-gallery,
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        grid-auto-rows: 260px;
+    }
+
+    .gallery-item.gallery-large {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+
+    .gallery-filters {
+        justify-content: flex-start;
+    }
+
+    .reservation-form-wrapper {
+        padding: 25px 17px;
+    }
+
+    .reservation-image img {
+        height: 260px;
+    }
+
+    .brand-statement {
+        min-height: 420px;
+    }
+
+    .lifestyle-banner,
+    .dining-cta,
+    .contact-banner {
+        min-height: 400px;
+    }
+}
+
+
+/* =========================================================
+   25. ACCESSIBILITY & FINAL POLISH
+========================================================= */
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 2px solid var(--gold);
+    outline-offset: 4px;
+}
+
+button:disabled {
+    opacity: .5;
+    cursor: not-allowed;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+    }
+}

@@ -1,0 +1,704 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>The Grand Étoile | Luxury Resort & Spa</title>
+
+    <meta name="description" content="Discover The Grand Étoile, a world of timeless elegance, exceptional hospitality, luxurious accommodations, fine dining, and unforgettable resort experiences.">
+    <meta name="theme-color" content="#111412">
+    <meta name="author" content="The Grand Étoile">
+
+    <!-- Social Sharing -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="The Grand Étoile | Luxury Resort & Spa">
+    <meta property="og:description" content="Escape the ordinary. Experience extraordinary luxury.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=1600&q=85">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="index.css">
+
+    <!-- Favicon: No image file required -->
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%23111412'/%3E%3Ctext x='50' y='72' font-size='68' text-anchor='middle' fill='%23c6a66b' font-family='Georgia,serif'%3E%C3%89%3C/text%3E%3C/svg%3E">
+
+    <!-- JavaScript -->
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- ACCESSIBILITY -->
+    <a href="#main-content" class="skip-link"></a>
+
+    <!-- HEADER -->
+    <header class="site-header">
+        <div class="container nav-container">
+
+            <a href="index.html" class="logo" aria-label="The Grand Étoile homepage">
+                THE GRAND <span>ÉTOILE</span>
+                <small>LUXURY RESORT & SPA</small>
+            </a>
+
+            <button
+                class="menu-toggle"
+                id="menuToggle"
+                type="button"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+                aria-controls="main-navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="main-nav" id="main-navigation" aria-label="Main navigation">
+                <a href="index.html" class="active" aria-current="page">Home</a>
+                <a href="rooms.html">Rooms & Suites</a>
+                <a href="dining.html">Dining</a>
+                <a href="experiences.html">Experiences</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="about.html">Our Story</a>
+                <a href="contact.html" class="nav-booking">Reservations</a>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <main id="main-content">
+
+        <!-- HERO SECTION -->
+        <section class="hero" aria-label="Welcome to The Grand Étoile">
+
+            <div class="hero-image">
+                <img
+                    src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=2400&q=90"
+                    alt="Elegant tropical resort surrounded by beautiful scenery"
+                    fetchpriority="high">
+            </div>
+
+            <div class="hero-overlay"></div>
+
+            <div class="hero-content">
+
+                <span class="hero-label">
+                    A WORLD OF EXCEPTIONAL LUXURY
+                </span>
+
+                <h1>
+                    Escape the Ordinary.
+                    <span>Experience Extraordinary.</span>
+                </h1>
+
+                <p>
+                    Discover a destination where timeless elegance,
+                    exceptional hospitality, and unforgettable moments
+                    come together.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="rooms.html" class="btn btn-gold">
+                        DISCOVER OUR ROOMS
+                    </a>
+
+                    <a href="experiences.html" class="btn btn-outline">
+                        EXPLORE THE RESORT
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="hero-bottom">
+                <span>AN EXCLUSIVE ESCAPE</span>
+                <span>01 — 07</span>
+            </div>
+
+        </section>
+
+
+        <!-- BOOKING SECTION -->
+        <section class="booking-section" aria-label="Plan your stay">
+
+            <form class="booking-form" id="bookingForm" action="contact.html" method="get">
+
+                <div class="booking-field">
+                    <label for="checkin">CHECK-IN</label>
+                    <input
+                        type="date"
+                        id="checkin"
+                        name="checkin"
+                        autocomplete="off"
+                        required>
+                </div>
+
+                <div class="booking-divider" aria-hidden="true"></div>
+
+                <div class="booking-field">
+                    <label for="checkout">CHECK-OUT</label>
+                    <input
+                        type="date"
+                        id="checkout"
+                        name="checkout"
+                        autocomplete="off"
+                        required>
+                </div>
+
+                <div class="booking-divider" aria-hidden="true"></div>
+
+                <div class="booking-field">
+                    <label for="guests">GUESTS</label>
+                    <select id="guests" name="guests">
+                        <option value="1">1 Guest</option>
+                        <option value="2" selected>2 Guests</option>
+                        <option value="3">3 Guests</option>
+                        <option value="4">4 Guests</option>
+                        <option value="5">5 Guests</option>
+                        <option value="6">6 Guests</option>
+                    </select>
+                </div>
+
+                <div class="booking-divider" aria-hidden="true"></div>
+
+                <div class="booking-field">
+                    <label for="roomType">ROOM TYPE</label>
+                    <select id="roomType" name="roomType">
+                        <option value="Any Room">Any Room</option>
+                        <option value="Deluxe Room">Deluxe Room</option>
+                        <option value="Ocean View Suite">Ocean View Suite</option>
+                        <option value="Presidential Suite">Presidential Suite</option>
+                        <option value="Private Villa">Private Villa</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="booking-button">
+                    CHECK AVAILABILITY <span aria-hidden="true">→</span>
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <!-- INTRODUCTION -->
+        <section class="intro section-padding">
+
+            <div class="section-heading">
+
+                <span class="eyebrow">WELCOME TO THE GRAND ÉTOILE</span>
+
+                <h2>
+                    Where Luxury Meets
+                    <span>Unforgettable Experiences</span>
+                </h2>
+
+                <div class="gold-line"></div>
+
+                <p>
+                    More than a destination, The Grand Étoile is a
+                    sanctuary designed for those who appreciate the
+                    finer things in life. Every detail is thoughtfully
+                    created to provide comfort, beauty, and exceptional
+                    experiences.
+                </p>
+
+                <a href="about.html" class="text-link">
+                    DISCOVER OUR STORY →
+                </a>
+
+            </div>
+
+            <div class="intro-images">
+
+                <img
+                    class="intro-main-image"
+                    src="https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?auto=format&fit=crop&w=1100&q=85"
+                    alt="Beautiful island resort overlooking the ocean"
+                    loading="lazy">
+
+                <img
+                    class="intro-small-image"
+                    src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=700&q=85"
+                    alt="Elegant and comfortable luxury hotel bedroom"
+                    loading="lazy">
+
+                <div class="intro-badge">
+                    <span>THE ART OF</span>
+                    <strong>EXCEPTIONAL<br>HOSPITALITY</strong>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ROOMS AND SUITES -->
+        <section class="rooms-section section-padding" id="rooms">
+
+            <div class="section-header">
+
+                <div>
+                    <span class="eyebrow">ACCOMMODATION</span>
+
+                    <h2>
+                        A Stay Beyond
+                        <span>Expectations</span>
+                    </h2>
+                </div>
+
+                <a href="rooms.html" class="text-link">
+                    VIEW ALL ACCOMMODATIONS →
+                </a>
+
+            </div>
+
+            <div class="rooms-grid">
+
+                <!-- DELUXE ROOM -->
+                <article class="room-card">
+
+                    <div class="room-image">
+                        <img
+                            src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=1000&q=85"
+                            alt="Beautifully furnished deluxe hotel room"
+                            loading="lazy">
+
+                        <span class="room-tag">SIGNATURE COMFORT</span>
+                    </div>
+
+                    <div class="room-info">
+
+                        <span class="room-category">COMFORT & ELEGANCE</span>
+
+                        <h3>Deluxe Room</h3>
+
+                        <p>
+                            A beautifully designed private retreat
+                            featuring elegant interiors, refined details,
+                            and modern comfort.
+                        </p>
+
+                        <a href="rooms.html" class="text-link">
+                            EXPLORE ROOM →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- OCEAN VIEW SUITE -->
+                <article class="room-card">
+
+                    <div class="room-image">
+                        <img
+                            src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1000&q=85"
+                            alt="Sophisticated luxury suite with elegant interior design"
+                            loading="lazy">
+                    </div>
+
+                    <div class="room-info">
+
+                        <span class="room-category">REFINED LUXURY</span>
+
+                        <h3>Ocean View Suite</h3>
+
+                        <p>
+                            Wake up to breathtaking views and enjoy
+                            an extraordinary level of space, comfort,
+                            and privacy.
+                        </p>
+
+                        <a href="rooms.html" class="text-link">
+                            EXPLORE ROOM →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PRESIDENTIAL VILLA -->
+                <article class="room-card">
+
+                    <div class="room-image">
+                        <img
+                            src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1000&q=85"
+                            alt="Exclusive contemporary luxury villa"
+                            loading="lazy">
+                    </div>
+
+                    <div class="room-info">
+
+                        <span class="room-category">ULTIMATE EXCLUSIVITY</span>
+
+                        <h3>Presidential Villa</h3>
+
+                        <p>
+                            Experience extraordinary living with
+                            spacious interiors, premium amenities,
+                            and exceptional privacy.
+                        </p>
+
+                        <a href="rooms.html" class="text-link">
+                            EXPLORE ROOM →
+                        </a>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- RESORT EXPERIENCE -->
+        <section class="experience-section">
+
+            <div class="experience-image">
+                <img
+                    src="https://images.unsplash.com/photo-1575429198097-0414ec08e8cd?auto=format&fit=crop&w=2200&q=90"
+                    alt="Spectacular resort swimming pool"
+                    loading="lazy">
+            </div>
+
+            <div class="experience-overlay"></div>
+
+            <div class="experience-content">
+
+                <span class="eyebrow">THE GRAND EXPERIENCE</span>
+
+                <h2>
+                    Beyond a Stay.
+                    <span>A Lifestyle.</span>
+                </h2>
+
+                <p>
+                    From peaceful mornings by the infinity pool
+                    to extraordinary evenings under the stars,
+                    discover experiences designed to inspire.
+                </p>
+
+                <a href="experiences.html" class="btn btn-gold">
+                    EXPLORE EXPERIENCES
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- DINING -->
+        <section class="dining-section section-padding">
+
+            <div class="dining-image">
+                <img
+                    src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1200&q=85"
+                    alt="Beautifully presented fine dining cuisine"
+                    loading="lazy">
+            </div>
+
+            <div class="dining-content">
+
+                <span class="eyebrow">CULINARY EXCELLENCE</span>
+
+                <h2>
+                    A Taste of
+                    <span>Extraordinary</span>
+                </h2>
+
+                <div class="gold-line"></div>
+
+                <p>
+                    Discover exceptional culinary creations prepared
+                    with carefully selected ingredients, artistic
+                    presentation, and a passion for fine dining.
+                </p>
+
+                <p>
+                    Every meal is an experience, thoughtfully
+                    prepared to delight your senses.
+                </p>
+
+                <a href="dining.html" class="btn btn-dark">
+                    DISCOVER OUR DINING
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- AMENITIES -->
+        <section class="amenities-section section-padding">
+
+            <div class="section-heading">
+
+                <span class="eyebrow">EXCEPTIONAL FACILITIES</span>
+
+                <h2>
+                    Everything You Need.
+                    <span>Nothing Less Than Exceptional.</span>
+                </h2>
+
+                <p>
+                    Enjoy carefully curated facilities designed
+                    to make every moment of your stay extraordinary.
+                </p>
+
+            </div>
+
+            <div class="amenities-grid">
+
+                <article class="amenity-card">
+                    <span class="amenity-number">01</span>
+                    <div class="amenity-icon" aria-hidden="true">✧</div>
+                    <h3>Luxury Spa</h3>
+                    <p>
+                        Reconnect with yourself through relaxing
+                        treatments and wellness experiences.
+                    </p>
+                </article>
+
+                <article class="amenity-card">
+                    <span class="amenity-number">02</span>
+                    <div class="amenity-icon" aria-hidden="true">◇</div>
+                    <h3>Infinity Pool</h3>
+                    <p>
+                        Relax in breathtaking surroundings
+                        with spectacular views.
+                    </p>
+                </article>
+
+                <article class="amenity-card">
+                    <span class="amenity-number">03</span>
+                    <div class="amenity-icon" aria-hidden="true">♧</div>
+                    <h3>Fine Dining</h3>
+                    <p>
+                        Enjoy exceptional dishes and
+                        memorable culinary experiences.
+                    </p>
+                </article>
+
+                <article class="amenity-card">
+                    <span class="amenity-number">04</span>
+                    <div class="amenity-icon" aria-hidden="true">☆</div>
+                    <h3>Private Events</h3>
+                    <p>
+                        Celebrate life's special moments
+                        in an extraordinary setting.
+                    </p>
+                </article>
+
+            </div>
+
+            <div class="amenities-link">
+                <a href="experiences.html" class="text-link">
+                    DISCOVER ALL FACILITIES →
+                </a>
+            </div>
+
+        </section>
+
+
+        <!-- GALLERY PREVIEW -->
+        <section class="gallery-section section-padding">
+
+            <div class="section-header">
+
+                <div>
+                    <span class="eyebrow">A GLIMPSE OF PARADISE</span>
+
+                    <h2>
+                        Moments Worth
+                        <span>Remembering</span>
+                    </h2>
+                </div>
+
+                <a href="gallery.html" class="text-link">
+                    VIEW FULL GALLERY →
+                </a>
+
+            </div>
+
+            <div class="gallery-grid">
+
+                <img
+                    src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=1000&q=85"
+                    alt="Luxury tropical resort exterior"
+                    loading="lazy">
+
+                <img
+                    src="https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?auto=format&fit=crop&w=1000&q=85"
+                    alt="Tropical island paradise"
+                    loading="lazy">
+
+                <img
+                    src="https://images.unsplash.com/photo-1575429198097-0414ec08e8cd?auto=format&fit=crop&w=1000&q=85"
+                    alt="Beautiful resort swimming pool"
+                    loading="lazy">
+
+                <img
+                    src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1000&q=85"
+                    alt="Elegant restaurant dining experience"
+                    loading="lazy">
+
+            </div>
+
+        </section>
+
+
+        <!-- TESTIMONIALS -->
+        <section class="testimonials-section section-padding">
+
+            <div class="section-heading">
+
+                <span class="eyebrow">THE ART OF HOSPITALITY</span>
+
+                <h2>
+                    An Experience Beyond
+                    <span>Expectations</span>
+                </h2>
+
+                <div class="gold-line"></div>
+
+            </div>
+
+            <div class="testimonial-card">
+
+                <div class="stars" aria-label="Five stars">★★★★★</div>
+
+                <blockquote>
+                    "An extraordinary experience from beginning
+                    to end. The beautiful surroundings, attention
+                    to detail, and exceptional hospitality made
+                    our stay truly unforgettable."
+                </blockquote>
+
+                <span class="guest-name">ILLUSTRATIVE GUEST REVIEW</span>
+                <span class="guest-location">SAMPLE TESTIMONIAL</span>
+
+            </div>
+
+        </section>
+
+
+        <!-- FINAL CALL TO ACTION -->
+        <section class="cta-section">
+
+            <div class="cta-background">
+                <img
+                    src="https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&fit=crop&w=2200&q=90"
+                    alt="Beautiful tropical island destination"
+                    loading="lazy">
+            </div>
+
+            <div class="cta-overlay"></div>
+
+            <div class="cta-content">
+
+                <span class="eyebrow">YOUR EXTRAORDINARY ESCAPE AWAITS</span>
+
+                <h2>
+                    Your Next Chapter
+                    Begins Here.
+                </h2>
+
+                <p>
+                    Allow us to make your next getaway
+                    an experience worth remembering.
+                </p>
+
+                <a href="contact.html" class="btn btn-gold">
+                    RESERVE YOUR EXPERIENCE
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <div class="footer-main">
+
+            <div class="footer-brand">
+
+                <a href="index.html" class="logo footer-logo" aria-label="The Grand Étoile homepage">
+                    <span class="logo-name">GRAND ÉTOILE</span>
+                    <span class="logo-subtitle">LUXURY RESORT & SPA</span>
+                </a>
+
+                <p>
+                    A destination where timeless elegance
+                    meets extraordinary hospitality.
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <h4>EXPLORE</h4>
+
+                <a href="index.html">Home</a>
+                <a href="rooms.html">Rooms & Suites</a>
+                <a href="dining.html">Dining</a>
+                <a href="experiences.html">Experiences</a>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <h4>DISCOVER</h4>
+
+                <a href="gallery.html">Gallery</a>
+                <a href="about.html">Our Story</a>
+                <a href="contact.html">Contact Us</a>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <h4>GET IN TOUCH</h4>
+
+                <p>Reservations & Guest Services</p>
+
+                <a href="mailto:reservations@grandetoile.example">
+                    reservations@grandetoile.example
+                </a>
+
+                <a href="contact.html">Contact & Inquiries</a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © <span class="current-year"></span>
+                THE GRAND ÉTOILE. ALL RIGHTS RESERVED.
+            </p>
+
+            <p>CRAFTED FOR EXTRAORDINARY EXPERIENCES.</p>
+
+        </div>
+
+    </footer>
+
+</body>
+</html>

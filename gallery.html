@@ -1,0 +1,371 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore the beauty and luxury of The Grand Étoile Resort & Spa through our photo gallery.">
+
+    <title>Gallery | The Grand Étoile Luxury Resort & Spa</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+<script src="script.js"></script>
+
+
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="site-header">
+        <div class="container nav-container">
+
+            <a href="index.html" class="logo">
+                THE GRAND <span>ÉTOILE</span>
+                <small>LUXURY RESORT & SPA</small>
+            </a>
+
+            <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                ☰
+            </button>
+
+            <nav class="main-nav">
+                <a href="index.html">Home</a>
+                <a href="rooms.html">Rooms & Suites</a>
+                <a href="dining.html">Dining</a>
+                <a href="experiences.html">Experiences</a>
+                <a href="gallery.html" class="active">Gallery</a>
+                <a href="about.html">About</a>
+                <a href="contact.html" class="nav-booking">Reservations</a>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <!-- HERO -->
+    <section class="page-hero gallery-hero">
+        <div class="page-hero-overlay"></div>
+
+        <div class="page-hero-content">
+            <span class="eyebrow">A VISUAL JOURNEY</span>
+
+            <h1>Moments Worth<br>Remembering</h1>
+
+            <p>
+                Explore the beauty, elegance, and unforgettable
+                experiences of The Grand Étoile.
+            </p>
+
+            <a href="#gallery" class="btn btn-gold">
+                EXPLORE THE GALLERY
+            </a>
+        </div>
+    </section>
+
+
+    <!-- INTRODUCTION -->
+    <section class="section">
+        <div class="container narrow-container text-center">
+
+            <span class="eyebrow">THE BEAUTY OF EVERY MOMENT</span>
+
+            <h2>Experience the Beauty of Étoile</h2>
+
+            <p>
+                Every corner of The Grand Étoile tells a story.
+                From elegant accommodations and exceptional dining
+                to breathtaking ocean views, discover the moments
+                that make every stay extraordinary.
+            </p>
+
+        </div>
+    </section>
+
+
+    <!-- GALLERY FILTERS AND IMAGES -->
+    <section class="section gallery-section" id="gallery">
+        <div class="container">
+
+            <div class="section-heading text-center">
+                <span class="eyebrow">OUR COLLECTION</span>
+                <h2>A Glimpse of Paradise</h2>
+                <p>
+                    Discover the different spaces and experiences
+                    waiting for you.
+                </p>
+            </div>
+
+
+            <!-- FILTER BUTTONS -->
+            <div class="gallery-filters">
+                <button class="gallery-filter active" data-filter="all">All</button>
+                <button class="gallery-filter" data-filter="rooms">Rooms</button>
+                <button class="gallery-filter" data-filter="dining">Dining</button>
+                <button class="gallery-filter" data-filter="pool">Pool & Beach</button>
+                <button class="gallery-filter" data-filter="nature">Nature</button>
+                <button class="gallery-filter" data-filter="experiences">Experiences</button>
+            </div>
+
+
+            <!-- GALLERY GRID -->
+            <div class="luxury-gallery">
+
+                <div class="gallery-item gallery-large" data-category="pool">
+                    <img
+                        src="https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=1400&q=85"
+                        alt="Luxury infinity swimming pool"
+                        loading="lazy">
+
+                    <div class="gallery-caption">
+                        <span>01 / POOL & BEACH</span>
+                        <h3>The Infinity Escape</h3>
+                    </div>
+                </div>
+
+
+                <div class="gallery-item" data-category="rooms">
+                    <img
+                        src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=1000&q=85"
+                        alt="Elegant luxury hotel bedroom"
+                        loading="lazy">
+
+                    <div class="gallery-caption">
+                        <span>02 / ROOMS</span>
+                        <h3>Elegant Living</h3>
+                    </div>
+                </div>
+
+
+                <div class="gallery-item" data-category="dining">
+                    <img
+                        src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1000&q=85"
+                        alt="Fine dining experience"
+                        loading="lazy">
+
+                    <div class="gallery-caption">
+                        <span>03 / DINING</span>
+                        <h3>The Art of Dining</h3>
+                    </div>
+                </div>
+
+
+                <div class="gallery-item" data-category="nature">
+                    <img
+                        src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1000&q=85"
+                        alt="Beautiful tropical beach"
+                        loading="lazy">
+
+                    <div class="gallery-caption">
+                        <span>04 / NATURE</span>
+                        <h3>Coastal Paradise</h3>
+                    </div>
+                </div>
+
+
+                <div class="gallery-item" data-category="experiences">
+                    <img
+                        src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1000&q=85"
+                        alt="Relaxing spa experience"
+                        loading="lazy">
+
+                    <div class="gallery-caption">
+                        <span>05 / EXPERIENCES</span>
+                        <h3>Moments of Serenity</h3>
+                    </div>
+                </div>
+
+
+                <div class="gallery-item" data-category="rooms">
+                    <img
+                        src="https://images.unsplash.com/photo-1613977257363-707ba9348227?auto=format&fit=crop&w=1000&q=85"
+                        alt="Luxury private villa"
+                        loading="lazy">
+
+                    <div class="gallery-caption">
+                        <span>06 / ROOMS</span>
+                        <h3>Private Luxury</h3>
+                    </div>
+                </div>
+
+
+                <div class="gallery-item" data-category="pool">
+                    <img
+                        src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1000&q=85"
+                        alt="Clear tropical ocean water"
+                        loading="lazy">
+
+                    <div class="gallery-caption">
+                        <span>07 / POOL & BEACH</span>
+                        <h3>Ocean Blue</h3>
+                    </div>
+                </div>
+
+
+                <div class="gallery-item" data-category="dining">
+                    <img
+                        src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1000&q=85"
+                        alt="Elegant restaurant interior"
+                        loading="lazy">
+
+                    <div class="gallery-caption">
+                        <span>08 / DINING</span>
+                        <h3>Dining in Elegance</h3>
+                    </div>
+                </div>
+
+
+                <div class="gallery-item" data-category="nature">
+                    <img
+                        src="https://images.unsplash.com/photo-1473116763249-2faaef81ccda?auto=format&fit=crop&w=1000&q=85"
+                        alt="Beautiful sunset over the sea"
+                        loading="lazy">
+
+                    <div class="gallery-caption">
+                        <span>09 / NATURE</span>
+                        <h3>Golden Hour</h3>
+                    </div>
+                </div>
+
+
+                <div class="gallery-item" data-category="experiences">
+                    <img
+                        src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=1000&q=85"
+                        alt="Luxury wellness treatment"
+                        loading="lazy">
+
+                    <div class="gallery-caption">
+                        <span>10 / EXPERIENCES</span>
+                        <h3>Wellness & Renewal</h3>
+                    </div>
+                </div>
+
+
+                <div class="gallery-item" data-category="rooms">
+                    <img
+                        src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1000&q=85"
+                        alt="Beautiful hotel suite"
+                        loading="lazy">
+
+                    <div class="gallery-caption">
+                        <span>11 / ROOMS</span>
+                        <h3>Comfort Redefined</h3>
+                    </div>
+                </div>
+
+
+                <div class="gallery-item" data-category="nature">
+                    <img
+                        src="https://images.unsplash.com/photo-1518837695005-2083093ee35b?auto=format&fit=crop&w=1000&q=85"
+                        alt="Waves along the coastline"
+                        loading="lazy">
+
+                    <div class="gallery-caption">
+                        <span>12 / NATURE</span>
+                        <h3>Where the Ocean Meets You</h3>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- FEATURED QUOTE -->
+    <section class="gallery-quote">
+        <div class="container text-center">
+
+            <span class="eyebrow">THE GRAND ÉTOILE PROMISE</span>
+
+            <h2>
+                "Luxury is not just what you see.
+                It is what you feel and remember."
+            </h2>
+
+            <p>THE GRAND ÉTOILE</p>
+
+        </div>
+    </section>
+
+
+    <!-- CTA -->
+    <section class="dining-cta gallery-cta">
+        <div class="dining-cta-overlay"></div>
+
+        <div class="container dining-cta-content">
+            <span class="eyebrow">YOUR STORY STARTS HERE</span>
+
+            <h2>Come Create<br>Your Own Memories</h2>
+
+            <p>
+                Experience the beauty of The Grand Étoile
+                and make every moment unforgettable.
+            </p>
+
+            <a href="contact.html" class="btn btn-gold">
+                RESERVE YOUR STAY
+            </a>
+        </div>
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="container footer-container">
+
+            <div class="footer-brand">
+                <a href="index.html" class="logo">
+                    THE GRAND <span>ÉTOILE</span>
+                    <small>LUXURY RESORT & SPA</small>
+                </a>
+
+                <p>
+                    A destination where luxury, comfort,
+                    and unforgettable experiences come together.
+                </p>
+            </div>
+
+            <div class="footer-links">
+                <h3>Explore</h3>
+                <a href="index.html">Home</a>
+                <a href="rooms.html">Rooms & Suites</a>
+                <a href="dining.html">Dining</a>
+                <a href="experiences.html">Experiences</a>
+            </div>
+
+            <div class="footer-links">
+                <h3>Discover</h3>
+                <a href="gallery.html">Gallery</a>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact</a>
+                <a href="contact.html">Reservations</a>
+            </div>
+
+            <div class="footer-contact">
+                <h3>Contact</h3>
+                <p>Email: reservations@grandetoile.example</p>
+                <p>Phone: +63 900 000 0000</p>
+                <p>Philippines</p>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>
+                © <span id="current-year"></span> The Grand Étoile.
+                All Rights Reserved.
+            </p>
+        </div>
+    </footer>
+
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>
